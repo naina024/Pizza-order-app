@@ -15,7 +15,16 @@ class App extends Component {
 			<React.Fragment>
 				<Navbar />
 				<Switch>
-					<Route exact path='/' component={PizzaList} />
+					<Route
+						exact
+						path='/'
+						render={(props) => (
+							<React.Fragment>
+								<HomeImage />
+								<PizzaList />
+							</React.Fragment>
+						)}
+					/>
 					<Route path='/pizzalist' component={PizzaList} />
 					<Route path='/cart' component={Cart} />
 					<Route path='/checkout' component={Checkout} />
