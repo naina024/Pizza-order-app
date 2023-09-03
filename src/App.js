@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/Navbar';
 import PizzaList from './Components/PizzaList';
+import HomeImage from './Components/HomeImage';
 import Default from './Components/Default';
 import Cart from './Components/Cart';
 import Checkout from './Components/Checkout';
@@ -18,6 +19,16 @@ class App extends Component {
 					<Route
 						exact
 						path='/'
+						render={(props) => (
+							<React.Fragment>
+								<HomeImage />
+								<PizzaList />
+							</React.Fragment>
+						)}
+					/>
+					<Route
+						exact
+						path='/Pizza-order-app'
 						render={(props) => (
 							<React.Fragment>
 								<HomeImage />
